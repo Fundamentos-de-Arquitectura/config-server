@@ -19,3 +19,8 @@ spring:
           uri: lb://profiles-service
           predicates:
             - Path=/api/v1/profiles/**
+        - id: iam-microservice
+          uri: lb://iam-microservice
+          predicates:
+            - Path=/api/v1/accounts/**
+            - Path=/api/v1/authentication/**
