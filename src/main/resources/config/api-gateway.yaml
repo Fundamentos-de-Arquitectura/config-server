@@ -28,3 +28,7 @@ spring:
           uri: lb://subscription-service
           predicates:
             - Path=/api/v1/subscriptions/**
+        - id: menu-service
+          uri: lb://menu-service
+          predicates:
+            - Path=/api/v1/menu/**
