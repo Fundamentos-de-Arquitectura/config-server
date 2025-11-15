@@ -32,3 +32,11 @@ spring:
           uri: lb://menu-service
           predicates:
             - Path=/api/v1/menu/**
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/api/v1/inventory/**
+        - id: orders-service
+          uri: lb://orders-service
+          predicates:
+            - Path=/api/v1/orders/**
