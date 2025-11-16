@@ -19,10 +19,13 @@ spring:
           uri: lb://profiles-service
           predicates:
             - Path=/api/v1/profiles/**
-        - id: iam-microservice
+        - id: iam-accounts
           uri: lb://iam-microservice
           predicates:
             - Path=/api/v1/accounts/**
+        - id: iam-authentication
+          uri: lb://iam-microservice
+          predicates:
             - Path=/api/v1/authentication/**
         - id: subscription-service
           uri: lb://subscription-service
@@ -36,6 +39,10 @@ spring:
           uri: lb://inventory-service
           predicates:
             - Path=/api/v1/inventory/**
+        - id: inventory-products
+          uri: lb://inventory-service
+          predicates:
+            - Path=/api/v1/products/**
         - id: orders-service
           uri: lb://orders-service
           predicates:
